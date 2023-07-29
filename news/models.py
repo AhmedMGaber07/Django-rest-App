@@ -20,7 +20,7 @@ class NewsTitle(models.Model):
     news = models.ForeignKey(
         News, on_delete=models.SET_NULL, null=True, blank=True)
     paragraph = models.TextField(max_length=250, default='')
-    order = models.DecimalField(max_digits=10, decimal_places=0,default='')
+    order = models.DecimalField(max_digits=10, decimal_places=0, default='')
     list_items = models.TextField(max_length=500, null=True, blank=True)
 
     def __str__(self):
